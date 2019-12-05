@@ -241,4 +241,4 @@ if __name__ == "__main__":
     if not options.clusterinfopath:
         options.clusterinfopath = None
 
-    build_particle_file(options.inputfilename, options.clusterinfopath)
+    build_particle_file(options.inputfilename,options.meshfile, options.clusterinfopath)
