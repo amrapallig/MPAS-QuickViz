@@ -17,8 +17,8 @@
 #MSUB -A w14_mpaseddy
 ##MSUB -l depend=970675
 
-module load anconda
-setenv PYTHONPATH /users/pwolfram/lib/python2.7/site-packages/
+#module load anconda
+#setenv PYTHONPATH /users/pwolfram/lib/python2.7/site-packages/
 
 set totcount = 0
 foreach i (analyze_*)

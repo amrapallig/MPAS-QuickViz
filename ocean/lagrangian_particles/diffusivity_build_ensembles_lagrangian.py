@@ -19,7 +19,7 @@ def get_realization_paths(rootdir, folder_prefix): #{{{
         for adir in dirs:
           if(adir.startswith(folder_prefix)):
             fnames.append(rootdir + '/' + adir)
-
+    print('fnames',fnames)
     return fnames #}}}
 
 def check_folder(folder): #{{{
@@ -34,7 +34,7 @@ def build_ensembles(root, prefix):
   LANL
   09/29/2014
   """
-
+  print('read done2')
   # get ready to build ensemble data sets
   check_folder(root +'/particle_ensembles/')
   
@@ -104,5 +104,5 @@ if __name__ == "__main__":
   if not options.prefix:
     options.prefix = "analyze_output"
   #}}}
-
+  print('read done')
   build_ensembles(options.root, options.prefix)
