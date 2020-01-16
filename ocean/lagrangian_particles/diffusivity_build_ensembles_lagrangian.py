@@ -53,7 +53,7 @@ def build_ensembles(root, prefix):
   # loop over all files and aggregate data
   for num, folder in enumerate(file_names):
     print ('loading %s-th file in %s' % (str(num),folder))
-    data = np.load(folder+'/lagrangian_data.npz')
+    data = np.load('lagrangian_data.npz')
     print ('done')
     npart = data['Npart']
     mux = data['mux']

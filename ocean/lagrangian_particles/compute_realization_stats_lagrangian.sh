@@ -1,4 +1,4 @@
-#!/bin/tcsh
+#!/bin/sh
 # Name of job script:
 #MSUB -N compute_diff
 # request resource: walltime
@@ -32,8 +32,8 @@ set totcount = 24
 set count = 0
 foreach i (analyze_*)
   cd $i
-  if  ( ! (  -e log.0000.out )) then
-  #if  ( ! (  -e lagrangian_data.npz )) then
+  #if  ( ! (  -e log.0000.out )) then
+  if  ( ! (  -e lagrangian_data.npz )) then
     @ count++
     echo $i
     if ( $count >= $totcount ) then
